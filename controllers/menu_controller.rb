@@ -16,6 +16,8 @@ class MenuController
     puts "4 - Import entries from a CSV"
     puts "5 - Exit"
     print "Enter your selection: "
+    puts "6 - View Entry Number n"
+    print "Enter Entry Number: "
 
     selection = gets.to_i
 
@@ -39,6 +41,10 @@ class MenuController
       main_menu
     when 5
       puts "Good-bye!"
+    when 6
+      system "clear"
+      view_entry_number
+      main_menu
 
       exit(0)
 
