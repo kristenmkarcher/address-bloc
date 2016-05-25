@@ -92,5 +92,34 @@ describe "#import_from_csv" do
 
     check_entry(entry_five, "Sussie", "555-555-2036", "sussie@blocmail.com")
    end
+
+   it "imports the 1st entry" do
+     book.import_from_csv("entries_2.csv")
+
+     entry_one = book.entries_2[0]
+
+     check_entry(entry_one, "Kristen", "555-555-1234", "kristen@blocmail.com")
+   end
+
+   it "imports the 2nd entry" do
+     book.import_from_csv("entries_2.csv")
+
+     entry_two = book.entries_2[1]
+
+     check_entry(entry_two, "Marie", "555-555-4321", "marie@blocmail.com")
+   end
+
+   it "imports the 3rd entry" do
+     book.import_from_csv("entries_2.csv")
+
+     entry_three = book.entries_2[2]
+
+     check_entry(entry_three, "Stephanie", "555-555-5678", "stephanie@blocmail.com")
+   end
   end
+end
+
+
+
+
 end
