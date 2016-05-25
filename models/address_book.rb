@@ -15,6 +15,16 @@ def add_entry(name, phone_number, email)
     if name < entry.name
       break
     end
+
+def remove_entry(name, phone_number, email)
+
+  entries.each_with_index do |entry, i|
+
+    if name == entry.name
+      entries.delete_at(i)
+    end
+  end
+end
     index += 1
   end
 
