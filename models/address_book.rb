@@ -53,5 +53,16 @@ def add_entry(name, phone_number, email)
     end
 
     return nil
-  end 
+  end
+end
+
+  def iterative_search(name)
+    AddressBook.entries.each do |entry|
+      if entry.name == name
+        return name
+      else
+        return nil
+      end
+    end
+  end
 end
