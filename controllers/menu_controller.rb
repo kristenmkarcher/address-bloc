@@ -150,6 +150,13 @@ end
    puts "#{entry.name} has been deleted"
   end
 
+ def nuke_entries
+   address_book.entries.each do |entry|
+     address_book.entries.delete(entry)
+      puts "#{entry.name} has been deleted"
+   end
+ end
+
  def edit_entry(entry)
 
    print "Updated name: "
@@ -173,6 +180,7 @@ end
     puts "\nd - delete entry"
     puts "e - edit this entry"
     puts "m - return to main menu"
+    puts "a - delete all entries"
 
     selection = gets.chomp
 
@@ -187,6 +195,10 @@ end
         main_menu
       when "m"
         system "clear"
+        main_menu
+      when "a"
+        system "clear"
+        nuke_entries
         main_menu
       else
         system "clear"
