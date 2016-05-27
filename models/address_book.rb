@@ -36,7 +36,7 @@ def add_entry(name, phone_number, email)
   def binary_search(name)
 
     lower = 0
-    upper = entries.length -1
+    upper = entries.length - 1
 
     while lower <= upper
 
@@ -53,5 +53,5 @@ def add_entry(name, phone_number, email)
     end
 
     return nil
-  end 
+  end
 end
